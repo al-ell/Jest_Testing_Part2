@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { game } = require("../game");
+
 
 
 beforeAll(() => {
@@ -13,6 +13,8 @@ beforeAll(() => {
     document.close();
 });
 
+const { game } = require("../game").game;
+
 describe("game object contains correct keys", () => {
     test("score key exists", () => {
         expect("score" in game).toBe(true);
@@ -21,3 +23,5 @@ describe("game object contains correct keys", () => {
         expect("currentGame" in game).toBe(true);
     });
 });
+
+
